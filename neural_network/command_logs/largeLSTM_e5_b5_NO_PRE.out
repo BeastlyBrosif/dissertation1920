@@ -1,0 +1,98 @@
+nohup: ignoring input
+Importing Test Users
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+Importing Control Users
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+Test and Control Combined
+Labels:  [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0]
+Users Loaded:  193
+tf.Tensor([b'bici' b'sens' b'dubte' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'@' b'xSnowdeer' b'i' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'Some' b'of' b"y'all" ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'@' b'NMS93' b'The' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'Ogni' b'anno' b'migliaia' ... b'' b'' b''], shape=(576000,), dtype=string)
+VOCAB SIZE:  518206
+Encoding the Dataset
+After Encoding
+Count -> data_set:  74
+Batch Size:  5
+Take Size:  38
+Count -> Train_data: 74
+Count -> Test_data: 74
+<PaddedBatchDataset shapes: ((None, None), (None,)), types: (tf.int64, tf.int64)>
+<PaddedBatchDataset shapes: ((None, None), (None,)), types: (tf.int64, tf.int64)>
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, None, 12)          6218484   
+_________________________________________________________________
+bidirectional (Bidirectional (None, 24)                2400      
+_________________________________________________________________
+dropout (Dropout)            (None, 24)                0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 200       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 8)                 0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 8)                 0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 9         
+=================================================================
+Total params: 6,221,165
+Trainable params: 6,221,165
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/5
+      1/Unknown - 14463s 14463s/step
+Epoch 00001: saving model to output/2020_03_15_14-45-25/training/20200315-144525
+      1/Unknown - 14464s 14464s/stepTraceback (most recent call last):
+  File "dataset_builder.py", line 310, in <module>
+    model.fit(train_data, validation_data=test_data, epochs=EPOCHS, callbacks=[cp_callback, tensorboard_callback])#, batch_size=BATCH_SIZE)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training.py", line 728, in fit
+    use_multiprocessing=use_multiprocessing)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 324, in fit
+    total_epochs=epochs)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 123, in run_one_epoch
+    batch_outs = execution_function(iterator)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_v2_utils.py", line 86, in execution_function
+    distributed_function(input_fn))
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 457, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 520, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 1823, in __call__
+    return graph_function._filtered_call(args, kwargs)  # pylint: disable=protected-access
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 1141, in _filtered_call
+    self.captured_inputs)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 1224, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 511, in call
+    ctx=ctx)
+  File "/home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/eager/execute.py", line 67, in quick_execute
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  indices[3,32999] = 518207 is not in [0, 518207)
+	 [[node sequential/embedding/embedding_lookup (defined at /home/psynw2/venv/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py:1751) ]] [Op:__inference_distributed_function_6892]
+
+Function call stack:
+distributed_function
+

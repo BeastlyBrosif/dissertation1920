@@ -18,7 +18,7 @@ count = 0
 #keeps track of 'unsure' inputs
 ids = set()
 num_of_users = 0;
-with open("user_list.txt", 'r+', encoding='utf-8') as file:
+with open("user_list_pred.txt", 'r+', encoding='utf-8') as file:
 	for line in file:
 		num_of_users = num_of_users + 1
 	file.close()
@@ -33,7 +33,7 @@ for tweet in tweepy.Cursor(api.search, q="I have been diagnosed with depression"
 		in_key = input('Acceptable (y/n/u)?')
 		b_newUser = True
 		if in_key == 'y':
-			with open("user_list.txt", 'r+', encoding='utf-8') as file:
+			with open("user_list_pred.txt", 'r+', encoding='utf-8') as file:
 				for line in file:
 					if tweet.user.screen_name == line:
 						print("This user has already been addeed to the file!")

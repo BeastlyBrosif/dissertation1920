@@ -1,0 +1,61 @@
+nohup: ignoring input
+Importing Test Users
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+Importing Control Users
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+User Omitted: Too Few Records
+Test and Control Combined
+Labels:  [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0]
+Users Loaded:  192
+tf.Tensor([b'mtvstars' b'5' b'seconds' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'grabbing' b'HANDLEs' b'shoulder' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'HANDLE' b'HANDLE' b'i' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'today' b'i' b'plan' ... b'' b'' b''], shape=(576000,), dtype=string)
+tf.Tensor([b'NAME' b'how' b'NAME' ... b'' b'' b''], shape=(576000,), dtype=string)
+VOCAB SIZE:  210581
+Encoding the Dataset
+After Encoding
+(<tf.Tensor: id=433, shape=(19301,), dtype=int64, numpy=array([125230,   5085, 164834, ...,   7241,  13566, 202997])>, <tf.Tensor: id=434, shape=(), dtype=int64, numpy=1>)
+(<tf.Tensor: id=438, shape=(40396,), dtype=int64, numpy=array([ 78173,   7201, 168437, ...,  89680, 185207,  55444])>, <tf.Tensor: id=439, shape=(), dtype=int64, numpy=1>)
+Count -> data_set:  74
+Batch Size:  5
+Take Size:  38
+<PaddedBatchDataset shapes: ((None, 576000), (None,)), types: (tf.int64, tf.int64)>
+<PaddedBatchDataset shapes: ((None, 576000), (None,)), types: (tf.int64, tf.int64)>
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, None, 8)           1684656   
+_________________________________________________________________
+lstm (LSTM)                  (None, 24)                3168      
+_________________________________________________________________
+dropout (Dropout)            (None, 24)                0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 200       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 8)                 0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 9         
+=================================================================
+Total params: 1,688,033
+Trainable params: 1,688,033
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/10

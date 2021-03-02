@@ -1,0 +1,3 @@
+city names: https://gist.github.com/norcal82/4accc0d968444859b408
+Kalinchernev/countries, countries, https://gist.github.com/kalinchernev/486393efcca01623b18d, Accessed on 02/12/2019
+Smashew/NameDatabases, first names us.txt https://github.com/smashew/NameDatabases/blob/master/NamesDatabases/first%20names/us.txt,Accessed on 02/12/2019
